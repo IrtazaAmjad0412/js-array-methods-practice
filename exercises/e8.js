@@ -6,9 +6,15 @@ import { data } from "../data/data";
 
 export function findPlanetNameByMoon(data, moonName) {
   // Your code goes here...
+  const result = data.planets.find(function (planet) {
+    if (planet.hasOwnProperty("moons") && planet.moons.includes(moonName)) {
+      return true;
+    } else {
+      false;
+    }
+  });
+  return result.name;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-8"

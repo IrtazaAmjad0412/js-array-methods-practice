@@ -6,10 +6,10 @@ import { data } from "../data/data";
 
 export function getOrbitalPeriodsSum(data) {
   // Your code goes here...
-  const result = data.asteroids.reduce(function (accumulator, asteroid) {
-    return accumulator + asteroid.orbitalPeriod;
-  }, 0);
-  return result;
+  return data.asteroids.reduce(
+    (accumulator, asteroid) => accumulator + asteroid.orbitalPeriod,
+    0
+  );
 }
 
 // === TEST YOURSELF ===

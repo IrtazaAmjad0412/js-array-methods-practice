@@ -6,14 +6,10 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
-  const result = data.planets.reduce(function (accumulator, planet) {
-    if (planet.moonsCount) {
-      return accumulator + planet.moonsCount;
-    } else {
-      return accumulator + 0;
-    }
-  }, 0);
-  return result;
+  return data.planets.reduce(
+    (accumulator, planet) => accumulator + (planet.moonsCount || 0),
+    0
+  );
 }
 
 // === TEST YOURSELF ===
